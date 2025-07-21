@@ -2,134 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog - Sakthivel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakthivel's Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f9f9f9;
+            color: #333;
         }
 
         header {
-            background-color: #0d1117;
+            background: #1f1f1f;
             color: white;
-            padding: 20px 40px;
+            padding: 30px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
         }
 
         nav a {
-            color: white;
-            margin-left: 20px;
+            color: #fff;
             text-decoration: none;
+            margin-left: 25px;
             font-weight: 500;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .hero {
+            background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
         }
 
-        .blog-container {
-            padding: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .hero h2 {
+            font-size: 48px;
+            margin: 0;
         }
 
-        .blog-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.2s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-title {
+        .hero p {
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        section {
+            padding: 60px 80px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #222;
+            border-left: 6px solid #2575fc;
+            padding-left: 15px;
+        }
+
+        .blog-post {
+            margin-bottom: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .blog-post h3 {
+            margin-top: 0;
             color: #333;
         }
 
-        .blog-description {
+        .blog-post p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .certificate-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .certificate-card:hover {
+            transform: scale(1.03);
+        }
+
+        .certificate-card h4 {
+            margin: 0;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .certificate-card p {
             font-size: 14px;
-            color: #555;
-        }
-
-        .read-more {
-            margin-top: 15px;
-            display: inline-block;
-            padding: 8px 14px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .read-more:hover {
-            background-color: #0056b3;
+            color: #777;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #0d1117;
-            color: white;
+            padding: 30px;
+            background: #1f1f1f;
+            color: #aaa;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Sakthivel's Blog</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://drive.google.com/file/d/13PngvGCUN7PUeyEFlGVA_aaXi2emYFtH/view?usp=sharing" target="_blank">CV</a>
-    </nav>
-</header>
+    <header>
+        <h1>Sakthivel's Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="#certificates">Certificates</a>
+        </nav>
+    </header>
 
-<div class="blog-container">
-    <div class="blog-card">
-        <div class="blog-title">Mastering Python for Web Deployment</div>
-        <div class="blog-description">
-            A quick walkthrough of deploying Python web apps with Flask, FastAPI, and Streamlit. Includes tips and tools for hosting on Render and GitHub.
+    <section class="hero">
+        <h2>Welcome to My Tech Blog</h2>
+        <p>Sharing experiences on AI, Web, and Machine Learning</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">Latest Posts</h2>
+
+        <div class="blog-post">
+            <h3>🎯 Deploying AI Projects on Streamlit</h3>
+            <p>I recently worked on a health checker app using Streamlit and integrated AI models for disease detection. It has 10 panel options and a chatbot...</p>
         </div>
-        <a href="#" class="read-more">Read More</a>
-    </div>
 
-    <div class="blog-card">
-        <div class="blog-title">How I Built My Personal Website</div>
-        <div class="blog-description">
-            Here's how I created a responsive modern portfolio using just HTML, CSS, and a bit of JS. No frameworks, just clean code!
+        <div class="blog-post">
+            <h3>📸 Flower Classification using CNN</h3>
+            <p>Used Kaggle's dataset to classify flowers using TensorFlow. Trained, validated and tested with external images. Got 92% accuracy!</p>
         </div>
-        <a href="#" class="read-more">Read More</a>
-    </div>
+    </section>
 
-    <div class="blog-card">
-        <div class="blog-title">Top 5 VS Code Extensions I Use</div>
-        <div class="blog-description">
-            These extensions speed up my development and keep my code neat. If you’re a student or hobbyist, don’t miss these!
+    <section id="certificates">
+        <h2 class="section-title">Certificates</h2>
+        <div class="certificates">
+            <div class="certificate-card">
+                <h4>Machine Learning Internship</h4>
+                <p>Panith Innovations (June 2025)</p>
+            </div>
+
+            <div class="certificate-card">
+                <h4>IoT + AWS Bootcamp</h4>
+                <p>Kamaraj College of Engineering (May 2025)</p>
+            </div>
+
+            <div class="certificate-card">
+                <h4>Generative AI Workshop</h4>
+                <p>Completed via Google Developers Group</p>
+            </div>
         </div>
-        <a href="#" class="read-more">Read More</a>
-    </div>
-</div>
+    </section>
 
-<footer>
-    © 2025 Sakthivel | Smart & Quick Learner
-</footer>
+    <footer>
+        © 2025 Sakthivel | Powered by KCET
+    </footer>
 
 </body>
 </html>
